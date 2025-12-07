@@ -1,5 +1,7 @@
-if NewUi then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiHub111/Forge/refs/heads/main/No1Dev"))()
-else
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiHub111/OldGui/refs/heads/main/Forge"))()
-end
+local NewUi = getgenv().NewUi
+
+local LinkNew = "https://raw.githubusercontent.com/SkibidiHub111/Forge/refs/heads/main/No1Dev"
+local LinkOld = "https://raw.githubusercontent.com/SkibidiHub111/OldGui/refs/heads/main/Forge"
+
+local url = NewUi and LinkNew or LinkOld
+loadstring(game:HttpGet(url))()
